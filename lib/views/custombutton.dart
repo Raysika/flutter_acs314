@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:test_drive/configs/constants.dart';
 import 'package:test_drive/views/customtext.dart';
+import 'package:test_drive/views/navigation_bar.dart';
 
 class CustomButton extends StatelessWidget {
   final Color labelColor;
@@ -23,6 +24,12 @@ class CustomButton extends StatelessWidget {
         } else {
           // Handle login logic
           print("Logging in...");
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (context) =>
+                    Navigation_Bar()), // Navigate to the Dashboard
+          );
         }
       },
       // ignore: sort_child_properties_last
